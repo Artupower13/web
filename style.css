@@ -1,0 +1,146 @@
+<html>
+<title>Practicas de Javascript</title>
+<head>
+<body style="background-color: #f2d37e;">
+<center>
+    <script>
+        if (confirm("Si quiere acceder a la pagina web, porfavor presione 'aceptar'") == true)  {
+            document.write("");
+        } else {
+            window.close()
+        }
+    </script>
+<style>
+button {
+            background-color: rgb(255, 255, 255);
+            color: rgb(90, 133, 214);
+            padding: 10px 20px;
+            border-style: solid;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+</style>
+<h1>Bienvenido a las practicas de Javascript</h1>
+<h2>*Hecho por Arturo Estevez Espadas*</h2><br><br><hr style="height:1px;border:none;color:#333;background-color:#333;">
+<br><button onclick="a()">Preguntas al Usuario</button><br><br><hr style="height:1px;border:none;color:#333;background-color:#333;">
+<br><button onclick="b()">Suma de 2 numeros</button><br><br><hr style="height:1px;border:none;color:#333;background-color:#333;">
+<br><button onclick="c()">Determinar mayoria de edad</button><br><br><hr style="height:1px;border:none;color:#333;background-color:#333;">
+<br><button onclick="e()">Juego del azar</button><br><br><hr style="height:1px;border:none;color:#333;background-color:#333;">
+<br><button onclick="f()">Test sobre TF2</button><br><br><hr style="height:1px;border:none;color:#333;background-color:#333;">
+<script>
+function a() {
+var edad = parseInt(prompt("Cuantos años tienes [En valor numerico]: "));
+var Color_pe = prompt("De que color es tu pelo: ");
+var Color_o = prompt("Y tus ojos: ");
+var Color_pi = prompt("Y el color de tu piel: ");
+var Gen = prompt("Cual es tu genero");
+document.write(` Tu edad es ${edad} años, tu color de pelo es ${Color_pe}, tus ojos son de color ${Color_o}, tu piel es de color ${Color_pi} y eres ${Gen}`)
+<button onclick="back()">Volver a la página principal</button>
+function back() {
+            window.location.href = "index.html";
+}
+
+}
+function b() {
+var num1 = parseFloat(prompt("Porfavor introduzca el primer numero para sumar: "))
+var num2 = parseFloat(prompt("Porfavor introduzca el segundo numero para sumar: "))
+var suma = num1 + num2
+document.write(suma)
+<button onclick="back()">Volver a la página principal</button>
+function back() {
+            window.location.href = "index.html";
+            }
+}
+function c() {
+var edad = parseFloat(prompt("Cuantos años tienes [Solo se aceptara informacion en valor numerico]"))
+        if (edad >= 18) {
+            document.write("Acceso concedido.");
+        }
+        else 
+            {document.write("Acceso denegado.")};
+<button onclick="back()">Volver a la página principal</button>
+function back() {
+            window.location.href = "index.html";
+            } 
+}
+function e() {
+var num_user = parseInt(prompt("Introduzca un numero del 1 al 100 [En valor numerico]"))
+let num_rand = Math.floor((Math.random() * 100) + 1);
+if (num_user == num_rand)
+document.write("Correcto, el numero aleatorio es: "+ num_rand)
+else
+document.write("Incorrecto, el numero aleatorio era: "+ num_rand)
+<button onclick="back()">Volver a la página principal</button>
+function back() {
+            window.location.href = "index.html";
+            } 
+}
+function f() {
+var startTime = new Date();
+
+var q1 = prompt("Primera pregunta: Cuantas clases contiene el juego?");
+let ans1 = ["9", "Nueve", "nueve"];
+if (ans1.includes(q1)) {
+    alert("Respuesta Correcta");
+} else {
+    alert("Respuesta Incorrecta");
+}
+
+var q2 = prompt("Segunda pregunta: Que mineral es mas valioso que cualquier otro en el universo de tf2?");
+const ans2 = ["Australium", "australium"];
+if (ans2.includes(q2)) {
+    alert("Respuesta Correcta");
+} else {
+    alert("Respuesta Incorrecta");
+}
+
+var q3 = prompt("Tercera pregunta: De que pais proviene el francotirador?");
+const ans3 = ["Nueva Zelanda", "Nueva zelanda", "nueva zelanda"];
+if (ans3.includes(q3)) {
+    alert("Respuesta Correcta");
+} else {
+    alert("Respuesta Incorrecta");
+}
+
+var q4 = prompt("Cuarta pregunta: Que significa el acronimo 'B.L.U' del equipo azul? (Importante las mayusculas!)");
+const ans4 = "Builders League United";
+if (q4 === ans4) {
+    alert("Respuesta Correcta");
+} else {
+    alert("Respuesta Incorrecta");
+}
+
+var q5 = prompt("Quinta pregunta: Como se llama la compañia que proporciona a los mercenarios con armas");
+const ans5 = ["Mann Co", "Mann Co."];
+if (ans5.includes(q5)) {
+    alert("Respuesta Correcta");
+} else {
+    alert("Respuesta Incorrecta");
+}
+
+var endTime = new Date();
+
+var elapsedTime = (endTime - startTime) / 1000;
+
+var punt_final = 0;
+if (ans1.includes(q1)) punt_final++;
+if (ans2.includes(q2)) punt_final++;
+if (ans3.includes(q3)) punt_final++;
+if (q4 === ans4) punt_final++;
+if (ans5.includes(q5)) punt_final++;
+
+document.write("Tu puntuacion final son " + punt_final + " punto/puntos. Has tardado " + elapsedTime + " segundos.");
+<button onclick="back()">Volver a la página principal</button>
+function back() {
+            window.location.href = "index.html";
+            } 
+}
+</script>
+</center>
+</body>
+</head>
+</html>
