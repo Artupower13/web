@@ -30,99 +30,56 @@ button {
 <br><button onclick="b()">Suma de 2 numeros</button><br><br><hr style="height:1px;border:none;color:#333;background-color:#333;">
 <br><button onclick="c()">Determinar mayoria de edad</button><br><br><hr style="height:1px;border:none;color:#333;background-color:#333;">
 <br><button onclick="e()">Juego del azar</button><br><br><hr style="height:1px;border:none;color:#333;background-color:#333;">
-<br><button onclick="f()">Test sobre Ultrakill</button><br><br><hr style="height:1px;border:none;color:#333;background-color:#333;">
+<br><button onclick="f()">Test sobre TF2</button><br><br><hr style="height:1px;border:none;color:#333;background-color:#333;">
 <script>
 function a() {
-<html>
-<title>Definidor de avatar</title>
-<head>
-<meta charset="UTF-8">
-<body>
-<script>
 var edad = parseInt(prompt("Cuantos años tienes [En valor numerico]: "));
 var Color_pe = prompt("De que color es tu pelo: ");
 var Color_o = prompt("Y tus ojos: ");
 var Color_pi = prompt("Y el color de tu piel: ");
 var Gen = prompt("Cual es tu genero");
 document.write(` Tu edad es ${edad} años, tu color de pelo es ${Color_pe}, tus ojos son de color ${Color_o}, tu piel es de color ${Color_pi} y eres ${Gen}`)
-</script>
 <button onclick="back()">Volver a la página principal</button>
-<script>
 function back() {
-            window.location.href = "PAGINA WEB.html";
+            window.location.href = "index.html";
 }
-</script>
-</body>
-</head>
-</html>;
+
 }
 function b() {
-<html>
-<title>Suma de 2 numeros</title>
-
-<script>
 var num1 = parseFloat(prompt("Porfavor introduzca el primer numero para sumar: "))
 var num2 = parseFloat(prompt("Porfavor introduzca el segundo numero para sumar: "))
 var suma = num1 + num2
 document.write(suma)
-</script>
 <button onclick="back()">Volver a la página principal</button>
-<script>
 function back() {
-            window.location.href = "PAGINA WEB.html";
+            window.location.href = "index.html";
             }
-</script>
-</html>;
 }
 function c() {
-    <html>
-<head>
-<title>Determinador de edad</title>
-<body>
-    <script>
-        var edad = parseFloat(prompt("Cuantos años tienes [Solo se aceptara informacion en valor numerico]"))
+var edad = parseFloat(prompt("Cuantos años tienes [Solo se aceptara informacion en valor numerico]"))
         if (edad >= 18) {
             document.write("Acceso concedido.");
         }
         else 
             {document.write("Acceso denegado.")};
-    </script>
 <button onclick="back()">Volver a la página principal</button>
-<script>
 function back() {
-            window.location.href = "PAGINA WEB.html";
-            }
-</script>
-</body>
-</head>
-</html>; 
+            window.location.href = "index.html";
+            } 
 }
 function e() {
-<html>
-<head>
-<body>
-<script>
 var num_user = parseInt(prompt("Introduzca un numero del 1 al 100 [En valor numerico]"))
 let num_rand = Math.floor((Math.random() * 100) + 1);
 if (num_user == num_rand)
 document.write("Correcto, el numero aleatorio es: "+ num_rand)
 else
 document.write("Incorrecto, el numero aleatorio era: "+ num_rand)
-</script>
 <button onclick="back()">Volver a la página principal</button>
-<script>
 function back() {
-            window.location.href = "PAGINA WEB.html";
-            }
-</script>
-</body>
-</head>
-</html>; 
+            window.location.href = "index.html";
+            } 
 }
 function f() {
-    <html>
-<body>
-<script>
 var startTime = new Date();
 
 var q1 = prompt("Primera pregunta: Cuantas clases contiene el juego?");
@@ -177,15 +134,10 @@ if (q4 === ans4) punt_final++;
 if (ans5.includes(q5)) punt_final++;
 
 document.write("Tu puntuacion final son " + punt_final + " punto/puntos. Has tardado " + elapsedTime + " segundos.");
-</script>
 <button onclick="back()">Volver a la página principal</button>
-<script>
 function back() {
-            window.location.href = "PAGINA WEB.html";
-            }
-</script>    
-</body>
-</html>; 
+            window.location.href = "index.html";
+            } 
 }
 </script>
 </center>
