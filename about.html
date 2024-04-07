@@ -41,6 +41,9 @@
 
         <!-- Button to return to the main page -->
         <button onclick="back()">Volver a la página principal</button>
+
+        <!-- Div to display output -->
+        <div id="output"></div>
     </center>
 
     <script>
@@ -50,30 +53,30 @@
             var Color_o = prompt("Y tus ojos: ");
             var Color_pi = prompt("Y el color de tu piel: ");
             var Gen = prompt("Cual es tu genero");
-            document.write(` Tu edad es ${edad} años, tu color de pelo es ${Color_pe}, tus ojos son de color ${Color_o}, tu piel es de color ${Color_pi} y eres ${Gen}`);
+            document.getElementById('output').innerHTML = ` Tu edad es ${edad} años, tu color de pelo es ${Color_pe}, tus ojos son de color ${Color_o}, tu piel es de color ${Color_pi} y eres ${Gen}`;
         }
         function b() {
             var num1 = parseFloat(prompt("Porfavor introduzca el primer numero para sumar: "))
             var num2 = parseFloat(prompt("Porfavor introduzca el segundo numero para sumar: "))
             var suma = num1 + num2
-            document.write(suma)
+            document.getElementById('output').innerHTML = suma;
         }
         function c() {
             var edad = parseFloat(prompt("Cuantos años tienes [Solo se aceptara informacion en valor numerico]"))
             if (edad >= 18) {
-                document.write("Acceso concedido.");
+                document.getElementById('output').innerHTML = "Acceso concedido.";
             }
             else {
-                document.write("Acceso denegado.");
+                document.getElementById('output').innerHTML = "Acceso denegado.";
             }
         }
         function e() {
             var num_user = parseInt(prompt("Introduzca un numero del 1 al 100 [En valor numerico]"))
             let num_rand = Math.floor((Math.random() * 100) + 1);
             if (num_user == num_rand)
-                document.write("Correcto, el numero aleatorio es: "+ num_rand);
+                document.getElementById('output').innerHTML = "Correcto, el numero aleatorio es: "+ num_rand;
             else
-                document.write("Incorrecto, el numero aleatorio era: "+ num_rand);
+                document.getElementById('output').innerHTML = "Incorrecto, el numero aleatorio era: "+ num_rand;
         }
         function f() {
             var startTime = new Date();
@@ -129,7 +132,7 @@
             if (q4 === ans4) punt_final++;
             if (ans5.includes(q5)) punt_final++;
 
-            document.write("Tu puntuacion final son " + punt_final + " punto/puntos. Has tardado " + elapsedTime + " segundos.");
+            document.getElementById('output').innerHTML = "Tu puntuacion final son " + punt_final + " punto/puntos. Has tardado " + elapsedTime + " segundos.";
         }
 
         // Function to return to the main page
